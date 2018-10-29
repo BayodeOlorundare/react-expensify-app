@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\B\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add numeral@2.0.6
+  C:\Program Files\nodejs\node.exe C:\Users\B\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
 
 PATH: 
   C:\Users\B\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\B\bin;C:\Program Files (x86)\Intel\TXE Components\TCS;C:\Program Files\Intel\TXE Components\TCS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\TXE Components\DAL;C:\Program Files (x86)\Intel\TXE Components\DAL;C:\Program Files\Intel\TXE Components\IPT;C:\Program Files (x86)\Intel\TXE Components\IPT;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\nodejs;C:\Users\B\AppData\Local\Microsoft\WindowsApps;C:\Users\B\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,11 +14,11 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\B\desktop\practise js\react js\course\expensify-app\node_modules\apache-crypt\src'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\B\desktop\practise js\react js\course\expensify-app\node_modules\history\node_modules\invariant'
 
 npm manifest: 
   {
-    "name": "expensify-app",
+    "name": "expensify",
     "version": "1.0.0",
     "main": "index.js",
     "author": "Bayode Olorundare",
@@ -43,29 +43,28 @@ npm manifest:
       "express": "4.15.4",
       "extract-text-webpack-plugin": "3.0.0",
       "moment": "2.18.1",
-      "node-sass": "4.8.3",
+      "node-sass": "4.5.3",
       "normalize.css": "7.0.0",
-      "raf": "3.3.2",
-      "react": "16.0.0",
+      "numeral": "2.0.6",
+      "react": "15.6.1",
       "react-addons-shallow-compare": "15.6.0",
-      "react-dates": "12.7.0",
-      "react-dom": "16.0.0",
+      "react-dates": "12.3.0",
+      "react-dom": "15.6.1",
       "react-modal": "2.2.2",
       "react-redux": "5.0.5",
-      "react-router-dom": "4.2.2",
+      "react-router-dom": "4.1.2",
       "redux": "3.7.2",
-      "sass-loader": "6.0.7",
+      "sass-loader": "6.0.6",
       "style-loader": "0.18.2",
       "uuid": "3.1.0",
       "validator": "8.0.0",
       "webpack": "3.1.0"
     },
-    "devDependencies": {    
-      "enzyme": "3.0.0",
-      "enzyme-adapter-react-16": "1.0.0",
-      "enzyme-to-json": "3.0.1",
-      "jest": "20.0.4",    
-      "react-test-renderer": "16.0.0",    
+    "devDependencies": {
+      "enzyme": "2.9.1",
+      "enzyme-to-json": "1.5.1",
+      "jest": "20.0.4",
+      "react-test-renderer": "15.6.1",
       "webpack-dev-server": "2.5.1"
     }
   }
