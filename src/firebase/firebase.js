@@ -82,7 +82,7 @@ export { firebase, database as default };
 // //   console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`);
 // // })
 
-// // Setup data sub -> Bayo is a Software Developer at Amazon.
+// // Setup data sub -> Andrew is a Software Developer at Amazon.
 
 // // Change the data and make sure it reprints
 
@@ -97,7 +97,7 @@ export { firebase, database as default };
 // //   });
 
 // // database.ref().set({
-// //   name: 'Bayo Olorundare',
+// //   name: 'Andrew Mead',
 // //   age: 26,
 // //   stressLevel: 6,
 // //   job: {
