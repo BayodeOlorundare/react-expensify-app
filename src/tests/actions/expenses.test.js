@@ -13,7 +13,7 @@ import {
 import expenses from '../fixtures/expenses';
 import database from '../../firebase/firebase';
 
-const uid = 'testuid'
+const uid = 'thisismytestuid';
 const defaultAuthState = { auth: { uid } };
 const createMockStore = configureMockStore([thunk]);
 
@@ -63,7 +63,7 @@ test('should setup edit expense action object', () => {
 test('should edit expense from firebase', (done) => {
   const store = createMockStore(defaultAuthState);
   const id = expenses[0].id;
-  const updates = { amount: 2120 };
+  const updates = { amount: 21045 };
   store.dispatch(startEditExpense(id, updates)).then(() => {
     const actions = store.getActions();
     expect(actions[0]).toEqual({
