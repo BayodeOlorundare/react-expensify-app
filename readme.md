@@ -1,7 +1,20 @@
-# Git Commands
+# React Expense App
 
-git init - Create a new git repo
-git status - View the changes to your project code
-git add - Add files to staging area
-git commit - Creates a new commit with files from staging area
-git log - View recent commits
+React expense app was built with Babel, Express JS, Firebase, Jest, Node JS, Redux and Webpack.
+
+## For Development
+
+```Use the following method```
+
+## Yarn
+
+```
+yarn  run dev-server
+```
+Then open [http://127.0.0.1:8080/](http://127.0.0.1:8080/) to see your app.<br>
+
+---------------------------------------
+```
+Access live app below via Heroku.
+```
+[Expense App](https://bayo-react-course-2-expensify.herokuapp.com/)
