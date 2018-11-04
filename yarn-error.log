@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\B\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add --dev enzyme-adaptor-react-16@1.0.0
+  C:\Program Files\nodejs\node.exe C:\Users\B\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add babel-polyfill@6.26.0
 
 PATH: 
   C:\Program Files (x86)\Intel\TXE Components\TCS\;C:\Program Files\Intel\TXE Components\TCS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\TXE Components\DAL\;C:\Program Files (x86)\Intel\TXE Components\DAL\;C:\Program Files\Intel\TXE Components\IPT\;C:\Program Files (x86)\Intel\TXE Components\IPT\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Users\B\AppData\Local\Microsoft\WindowsApps;C:\Users\B\AppData\Roaming\npm;C:\Program Files\heroku\bin
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/enzyme-adaptor-react-16: Not found
-      at Request.params.callback [as _callback] (C:\Users\B\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:64202:18)
-      at Request.self.callback (C:\Users\B\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:137468:22)
-      at emitTwo (events.js:126:13)
-      at Request.emit (events.js:214:7)
-      at Request.<anonymous> (C:\Users\B\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:138440:10)
-      at emitOne (events.js:116:13)
-      at Request.emit (events.js:211:7)
-      at IncomingMessage.<anonymous> (C:\Users\B\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:138362:12)
-      at Object.onceWrapper (events.js:313:30)
-      at emitNone (events.js:111:20)
+  Error: EPERM: operation not permitted, unlink 'C:\Users\B\Desktop\Practise JS\React JS\Course\expensify-app\node_modules\acorn-globals\node_modules\.bin'
 
 npm manifest: 
   {
@@ -36,7 +26,7 @@ npm manifest:
     "scripts": {
       "build:dev": "webpack",
       "build:prod": "webpack -p --env production",
-      "dev-server": "webpack-dev-server",
+      "dev-server": "cross-env NODE_ENV=test webpack-dev-server",
       "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
       "start": "node server/server.js",
       "heroku-postbuild": "yarn run build:prod"
@@ -50,10 +40,10 @@ npm manifest:
       "babel-preset-env": "1.5.2",
       "babel-preset-react": "6.24.1",
       "css-loader": "0.28.4",
-      "enzyme-adapter-react-16": "1.0.0",
       "express": "4.15.4",
       "extract-text-webpack-plugin": "3.0.0",
       "firebase": "4.2.0",
+      "history": "4.7.2",
       "moment": "2.18.1",
       "node-sass": "4.9.4",
       "normalize.css": "7.0.0",
@@ -80,7 +70,8 @@ npm manifest:
       "cross-env": "5.0.5",
       "dotenv": "4.0.0",
       "enzyme": "3.0.0",
-      "enzyme-adapter-react-15": "1.1.1",
+      "enzyme-adapter-react-15": "^1.1.1",
+      "enzyme-adapter-react-16": "^1.6.0",
       "enzyme-to-json": "3.0.1",
       "jest": "20.0.4",
       "react-test-renderer": "16.0.0",
@@ -1904,7 +1895,7 @@ Lockfile:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
   
-  enzyme-adapter-react-15@1.1.1:
+  enzyme-adapter-react-15@^1.1.1:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/enzyme-adapter-react-15/-/enzyme-adapter-react-15-1.1.1.tgz#6147557bbccf04a56094240ed3e3f2f7d3310acc"
     dependencies:
@@ -1914,17 +1905,19 @@ Lockfile:
       prop-types "^15.6.2"
       react-is "^16.5.2"
   
-  enzyme-adapter-react-16@1.0.0:
-    version "1.0.0"
-    resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.0.tgz#e7edd5536743818dcbef336d40d7da59b3a7db8e"
+  enzyme-adapter-react-16@^1.6.0:
+    version "1.6.0"
+    resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.6.0.tgz#3fca28d3c32f3ff427495380fe2dd51494689073"
     dependencies:
-      enzyme-adapter-utils "^1.0.0"
-      lodash "^4.17.4"
-      object.assign "^4.0.4"
+      enzyme-adapter-utils "^1.8.0"
+      function.prototype.name "^1.1.0"
+      object.assign "^4.1.0"
       object.values "^1.0.4"
-      prop-types "^15.5.10"
+      prop-types "^15.6.2"
+      react-is "^16.5.2"
+      react-test-renderer "^16.0.0-0"
   
-  enzyme-adapter-utils@^1.0.0, enzyme-adapter-utils@^1.8.0:
+  enzyme-adapter-utils@^1.8.0:
     version "1.8.1"
     resolved "https://registry.yarnpkg.com/enzyme-adapter-utils/-/enzyme-adapter-utils-1.8.1.tgz#a927d840ce2c14b42892a533aec836809d4e022b"
     dependencies:
@@ -2629,7 +2622,7 @@ Lockfile:
       hoek "2.x.x"
       sntp "1.x.x"
   
-  history@^4.7.2:
+  history@4.7.2, history@^4.7.2:
     version "4.7.2"
     resolved "https://registry.yarnpkg.com/history/-/history-4.7.2.tgz#22b5c7f31633c5b8021c7f4a8a954ac139ee8d5b"
     dependencies:
@@ -4754,7 +4747,7 @@ Lockfile:
       object-assign "^4.1.1"
       prop-types "^15.6.0"
   
-  react-is@^16.5.2:
+  react-is@^16.5.2, react-is@^16.6.0:
     version "16.6.0"
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.0.tgz#456645144581a6e99f6816ae2bd24ee94bdd0c01"
   
@@ -4824,6 +4817,15 @@ Lockfile:
     dependencies:
       fbjs "^0.8.16"
       object-assign "^4.1.1"
+  
+  react-test-renderer@^16.0.0-0:
+    version "16.6.0"
+    resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.6.0.tgz#fe490096bed55c3f4e92c023da3b89f9d03fceb3"
+    dependencies:
+      object-assign "^4.1.1"
+      prop-types "^15.6.2"
+      react-is "^16.6.0"
+      scheduler "^0.10.0"
   
   react@16.0.0:
     version "16.0.0"
@@ -5125,6 +5127,13 @@ Lockfile:
   sax@^1.2.1, sax@~1.2.1:
     version "1.2.4"
     resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+  
+  scheduler@^0.10.0:
+    version "0.10.0"
+    resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.10.0.tgz#7988de90fe7edccc774ea175a783e69c40c521e1"
+    dependencies:
+      loose-envify "^1.1.0"
+      object-assign "^4.1.1"
   
   schema-utils@^0.3.0:
     version "0.3.0"
