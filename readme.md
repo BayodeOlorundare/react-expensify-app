@@ -1,6 +1,21 @@
 # React Expense App
 
-React expense app was built with Babel, Express JS, Firebase, Jest, Node JS, Redux and Webpack.
+React expense app.
+
+## Technologies
+* HTML5
+* CSS3 preprocessed with SASS 
+* JavaScript
+* ReactJS
+* React Router
+* Redux
+* Redux thunk
+* Firebase
+* Jest for testing
+* Enzyme for testing
+* Webpack
+* babel
+* NodeJs
 
 ## For Development
 
